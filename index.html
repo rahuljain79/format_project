@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Form</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #imag {
+            margin-top: auto;
+            height: 300px;
+            min-width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #imag img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 20px;
+        }
+        #container {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #b94747;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius:10px;
+            cursor: pointer;
+        }
+        /* Style for small boxes */
+        /* #add {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #add input {
+            width: calc(48% - 5px);
+            margin-bottom: 10px;
+        } */
+        /* Adjustments for small screens */
+        @media (max-width: 600px) {
+            #add input {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="imag">
+        <img src="https://files.jotform.com/jufs/ugurg/form_files/Brown%20White%20Minimalist%20Elegant%20Wedding%20Planner%20Instagram%20Story%20(1).652e6527a91ec3.98254085.png?md5=nV-nvj_Q-i2pDt9rc47SVg&expires=1702812977" alt="photo">
+    </div>
+
+    <div id="container">
+        <h2>Hotel Reservation Form</h2>
+        <p>Please complete the form below.</p>
+        <p>Your registration will be verified prior to your arrival.</p>
+        
+        <label for="first_name">Full Name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name..">
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Enter your last name..">
+
+        <div id="add">
+            <label for="street_address">Address</label>
+            <input type="text" id="street_address" name="street_address" placeholder="Street Address">
+
+            <!-- <label for="street_address_2">Street Address Line 2</label><br><br> -->
+            <input type="text" id="street_address_2" name="street_address_2" placeholder="Street Address Line 2">
+
+            <!-- <label for="city">City</label> -->
+            <input type="text" id="city" name="city" placeholder="City">
+
+            <!-- <label for="state">State / Province</label> -->
+            <input type="text" id="state" name="state" placeholder="State / Province">
+
+            <!-- <label for="zip_code">Postal / Zip Code</label> -->
+            <input type="text" id="zip_code" name="zip_code" placeholder="Postal / Zip Code">
+        </div>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="tel" id="phone_number" name="phone_number" placeholder="(000) 000-000">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="example@example.com">
+
+        <label for="arrival_date">Arrival - Date and Time</label>
+        <input type="date" id="arrival_date" name="arrival_date" placeholder="MM-DD-YYYY">
+        <input type="time" id="arrival_time" name="arrival_time" placeholder="HH:MM">
+
+        <label for="adults">Number of Adults</label>
+        <input type="number" id="adults" name="adults" placeholder="e.g., 2">
+
+        <label for="kids">Number of Kids (If any)</label>
+        <input type="number" id="kids" name="kids" placeholder="e.g., 1">
+
+        <label for="payment_method">Payment Method</label>
+        <input type="radio" id="check_payment" name="payment_method">Check
+        <input type="radio" id="paypal_payment" name="payment_method">Paypal
+
+        <label for="special_request">Comment</label>
+        <input type="text" id="special_request" name="special_request" placeholder="Type here..">
+
+        <label for="verification">Choose for verification *</label><br>
+        <input type="text" id="verification" name="verification" list="verificationList" placeholder="Verify" required>
+        <datalist id="verificationList">
+            <option value="Adhar card">
+            <option value="Pan card">
+            <option value="Voter ID">
+            <!-- <option value="Aadhar card"> -->
+            <option value="Other">
+        </datalist>
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
